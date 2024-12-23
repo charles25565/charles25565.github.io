@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "target": "charless",
     "public": "/",
     "ignore": [
       "firebase.json",
