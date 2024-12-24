@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "personal-website-331eb"
+  },
+  "targets": {
+    "personal-website-331eb": {
+      "hosting": {
+        "main": [
+          "charles9"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
