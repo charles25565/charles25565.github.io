@@ -7,19 +7,23 @@
   src: url(/mono.woff2); 
 }
 body {
-  background-color: #000000;
-  color: #ffffff;
   font-family: Main, sans-serif;
 }
 pre, code, samp {
   font-family: Mono, monospace;
 }
-a {
-  color: #42a5f5;
-}
-a:visited {
-  color: #9575cd;
-}
 #home-header, #home-main {
   text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  a {
+    color: #42a5f5;
+  }
+  a:visited {
+    color: #9575cd;
+  }
 }
