@@ -1,13 +1,9 @@
 @font-face {
-  font-family: 'Main';
-  font-style: normal;
-  font-weight: 400;
+  font-family: Main;
   src: url(/main.woff2); 
 }
 @font-face {
-  font-family: 'Mono';
-  font-style: normal;
-  font-weight: 400;
+  font-family: Mono;
   src: url(/mono.woff2); 
 }
 body {
