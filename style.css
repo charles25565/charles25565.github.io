@@ -1,16 +1,8 @@
-@font-face {
-  font-family: Main;
-  src: url(/main.woff2); 
-}
-@font-face {
-  font-family: Mono;
-  src: url(/mono.woff2); 
-}
 body {
-  font-family: Main, sans-serif;
+  font-family: sans-serif;
 }
 pre, code, samp {
-  font-family: Mono, monospace;
+  font-family: monospace;
 }
 #home-header, #home-main {
   text-align: center;
