@@ -27,6 +27,3 @@ a:visited {
     color: mediumpurple;
   }
 }
-span.separator {
-  border-left: 10px solid transparent;
-}
