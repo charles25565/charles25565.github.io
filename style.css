@@ -1,21 +1,29 @@
 body {
   font-family: sans-serif;
+  background-color: snow;
+  color: black;
 }
 pre, code, samp {
   font-family: monospace;
+}
+a {
+  color: steelblue;
+}
+a:visited {
+  color: rebeccapurple;
 }
 #home-header, #home-main {
   text-align: center;
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: black;
+    color: white;
   }
   a {
-    color: #42a5f5;
+    color: lightskyblue;
   }
   a:visited {
-    color: #9575cd;
+    color: mediumpurple;
   }
 }
