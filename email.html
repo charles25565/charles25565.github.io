@@ -14,16 +14,19 @@
      <p>This list covers only providers that aren't covered by <a href="http://diggy.club/articles/email.xhtml" target="_blank">Dig Deeper's email provider list</a>. It's really detailed, check it out too.</p>
      <p>Also note that this has a perspective of pretty extreme threat models, if you want something that just works, just stick with Tuta Mail, which works for most non-advanced threat models.</p>
      <p>Furthermore, this page is an early WIP.</p>
+
      <h2>Atomic Mail</h2>
-     <p>An email service that looks great on the surface. Turns out, despite the privacy policy, they do use analytics scripts:</p>
+     <p>An email service that looks great on the surface. Turns out, contrary to the privacy policy, they do use non-self-hosted analytics scripts:</p>
      <img src="/atomicmailanalytics.png" alt="Ahrefs analytics script tag in the home page code">
      <p>At least they aren't in the actual app, this was similar behavior to how Skiff operated.</p>
-     <p><del>The encryption isn't really specified anywhere seemingly, so its better off just assumed unencrypted.</del> <ins>Turns out it is specified on various parts of the website that it does use AES-256, etc, but it is still very unclear. Very suspicious.</ins></p>
+     <p>It is specified on various parts of the website that it does use AES-256, etc, but it is very unclear about the encryption. Very suspicious.</p>
      <p>Another dubious claim is that they are GDPR compliant, yet they allegedly have no automatic account deletion, which is needed to be GDPR compliant.</p>
      <p>There also doesn't seem to be any email client support, only a web interface. You have to trust what the server gives you, and it is trivial to send different content to different IP addresses.</p>
      <p>Luckily, they don't seem to be blocking anonymizers, but who cares if they have made multiple other mistakes?</p>
+     <p>Data retention after skimming looks similar to Cock.li.</p>
      <p>After some extra digging, I found the site is operated by a John Smith (yeah, right?), and appears to have an Estonian address, etc. despite being supposedly in Germany. All from looking at a schema.org script.</p>
      <p>I will not be providing links to this service, as I cannot recommend it.</p>
+
      <h2>Monocles</h2>
      <p>Monocles is a pretty uncommon service, but you might've heard of it if you browsed F-Droid or did lots of digging.</p>
      <p>Firstly, they don't just not block anonymizers, they actually encourage it:</p>
@@ -38,6 +41,18 @@
      <a href="https://monocles.eu">monocles.eu</a>
      <br>
      <a href="https://monocles.de">monocles.de</a>
+
+     <h2>Pissmail</h2>
+     <p>This service is skipped as it has undeniably vile domain options.</p>
+     <p>I will not provide links to this service due to that alone.</p>
+
+     <h3>Ghosted.ws</h3>
+     <p>Service isn't really maintained anymore (as per an email from the admin) and banned my account not long after emailing Dig Deeper.</p>
+     <p>Half of their website is broken and uses most likely improperly licensed AI generated images as icons throughout the site.</p>
+     <p>It's also located in a 5 eyes country. So there's that.</p>
+     <p>Also, some sister sites have had expired certificates.</p>
+     <p>They also were planning on some sketchy botnet (or "Share 2 Earn" as they call it).</p>
+     <p>I will not be providing links to this service, as I cannot recommend it.</p>
     </main>
   </body>
 </html>
