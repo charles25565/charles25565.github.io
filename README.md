@@ -4,7 +4,7 @@
 
 This is my personal website. The name `website2` is a bit misleading, it is due to existing repos on my GitHub account. I've had multiple websites in the past.
 
-This site has been transported multiple times across different infrastructure, between *several* hosting providers. Currently it is being hosted on Cloudflare Pages.
+This site has been transported multiple times across different infrastructure, between *several* hosting providers. Currently it is being hosted on Render.
 
 ## Mess disclaimer
 
