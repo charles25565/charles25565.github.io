@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Defusing contentpass with just 1 SLOC</title>
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="/">Go home</a>
+    </header>
+    <main>
+     <h1>Defusing contentpass with just 1 SLOC</h1>
+     <h2>Introduction</h2>
+     <p>contentpass is a company that aims to make a single subscription to remove ads & disable cookies.</p>
+     <p>In my opinion it is really dumb. And since it is such a hassle to buy something, people just click allow.</p>
+     <h2>Defusing</h2>
+     <p>What nobody knew until now is that the contentpass library can be fooled with just 1 SLOC:</p>
+     <pre>Object.defineProperty(window, "cp", {
+  value: () => {},
+  writable: false
+});</pre>
+     <p>Yup, that's it.</p>
+     <h2>What the defuser does</h2>
+     <p>It is simple. It creates a fake <code>window.cp</code> object (which the contentpass library creates) that is an empty function that can't be changed.</p>
+     <h2>contentpass structure</h2>
+     <p>Now contentpass is structured in a very unique way. CMPs use the contentpass library and then show the button, etc.</p>
+     <p>The site developer uses the CMP and the CMP uses contentpass.</p>
+     <h2>Drawbacks</h2>
+     <p>A drawback of this simple defuser is that the CMP won't load at all if it tries to use anything returned from or in the <code>cp</code> object.</p>
+     <p>You won't be able to edit the cookies but that doesn't matter much since the GDPR requires explicit consent to even set a single cookie. Even if the modal fails to load, they can't set cookies (legally, of course).</p>
+     <h2>A userscript</h2>
+     <pre>// ==UserScript==
+// @name         contentpass defuser
+// @match        *://*/*
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  Object.defineProperty(window, "cp", {
+    value: () => {},
+    writable: false
+  });
+})();</pre>
+     <p>I've verified that it works in Violentmonkey on Firefox but should work anywhere.</p>
+     <h2>Conclusion</h2>
+     <p>We've successfully circumvented contentpass using a single <code>Object.defineProperty</code> function call. It was very simple and didn't take long to figure out, honestly, especially with help from LLMs.</p>
+     <p>It feels reminiscent of when you used to be able to bypass Securly by adding <code>?suicidepreventionlifeline.org</code> to the end of URLs.</p>
+     <h2>Links</h2>
+     <a href="https://docs.contentpass.net/">contentpass docs</a>
+     <p>Without the insight from the documentation, it would've been much harder to circumvent.</p>
+     <a href="https://www.contentpass.net/en/publications">List of contentpass partner sites</a>
+     <p>You could use that list to tell if the script works. Or you can use it as a list to block all the sites using it.</p>
+     <p>Curiously that has <code>#cpAction=denyAll</code> appended to every URL, you might want to remove that because it could cause issues when testing.</p>
+    </main>
+  </body>
+</html>
