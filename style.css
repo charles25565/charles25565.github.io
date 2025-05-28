@@ -10,7 +10,7 @@ a {
   color: steelblue;
 }
 a:visited {
-  color: rebeccapurple;
+  color: rebeccapurple; /* just for the color */
 }
 #home-header, #home-main {
   text-align: center;
